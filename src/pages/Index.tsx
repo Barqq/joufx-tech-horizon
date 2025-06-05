@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,12 +10,13 @@ const Index = () => {
   const [generatedImage, setGeneratedImage] = useState<string>('');
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Template images (using placeholder images for now)
+  // Template images (now including the uploaded JoufX template)
   const templates = [
-    { id: 1, src: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=600&h=400&fit=crop', name: 'قالب 1' },
-    { id: 2, src: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=600&h=400&fit=crop', name: 'قالب 2' },
-    { id: 3, src: 'https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?w=600&h=400&fit=crop', name: 'قالب 3' },
-    { id: 4, src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop', name: 'قالب 4' }
+    { id: 1, src: '/lovable-uploads/e2181d0f-f44b-42f5-8f62-8ce24dc8a4f2.png', name: 'قالب JoufX الخاص' },
+    { id: 2, src: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=600&h=400&fit=crop', name: 'قالب 2' },
+    { id: 3, src: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=600&h=400&fit=crop', name: 'قالب 3' },
+    { id: 4, src: 'https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?w=600&h=400&fit=crop', name: 'قالب 4' },
+    { id: 5, src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop', name: 'قالب 5' }
   ];
 
   const generateGreeting = () => {
