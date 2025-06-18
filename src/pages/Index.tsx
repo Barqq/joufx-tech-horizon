@@ -1,8 +1,10 @@
+
 import React, { useState, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
-import { Download, Sparkles, Heart } from "lucide-react";
+import { Download, Sparkles, Heart, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [selectedTemplate, setSelectedTemplate] = useState<string>('');
@@ -88,7 +90,7 @@ const Index = () => {
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md border-b border-purple-200 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-between">
             <div className="flex items-center space-x-reverse space-x-3">
               <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-xl flex items-center justify-center text-white font-bold text-xl">
                 ✖
@@ -98,6 +100,12 @@ const Index = () => {
                 <p className="text-sm text-purple-600">النادي التقني بمنطقة الجوف</p>
               </div>
             </div>
+            <Link to="/checkin-dashboard">
+              <Button className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900">
+                <Users className="w-4 h-4 ml-2" />
+                نظام تسجيل الحضور
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
